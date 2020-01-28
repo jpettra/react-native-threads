@@ -15,6 +15,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.devsupport.interfaces.DevSupportManager;
 
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import org.wonday.orientation.OrientationPackage;
+import com.psykar.cookiemanager.CookieManagerPackage;
+import com.kevinresol.react_native_default_preference.RNDefaultPreferencePackage;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -71,6 +76,10 @@ public class RNThreadModule extends ReactContextBaseJavaModule implements Lifecy
     try {
       ArrayList<ReactPackage> threadPackages = new ArrayList<ReactPackage>(Arrays.asList(additionalThreadPackages));
       threadPackages.add(0, new ThreadBaseReactPackage(getReactInstanceManager()));
+      threadPackages.add(new AsyncStoragePackage());
+      threadPackages.add(new OrientationPackage());
+      threadPackages.add(new CookieManagerPackage());
+      threadPackages.add(new RNDefaultPreferencePackage());
 
       ReactContextBuilder threadContextBuilder = new ReactContextBuilder(getReactApplicationContext())
               .setJSBundleLoader(bundleLoader)

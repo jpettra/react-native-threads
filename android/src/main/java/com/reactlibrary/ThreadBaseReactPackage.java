@@ -18,6 +18,8 @@ import com.facebook.react.modules.websocket.WebSocketModule;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.modules.debug.DevSettingsModule;
 
+import com.learnium.RNDeviceInfo.RNDeviceModule;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +33,7 @@ public class ThreadBaseReactPackage implements ReactPackage {
     }
 
     @Override
-    public List<NativeModule> createNativeModules(ReactApplicationContext catalystApplicationContext) {
+    public List<NativeModule>  createNativeModules(ReactApplicationContext catalystApplicationContext) {
         return Arrays.<NativeModule>asList(
                 // Core list
                 new AndroidInfoModule(catalystApplicationContext),
@@ -49,7 +51,11 @@ public class ThreadBaseReactPackage implements ReactPackage {
                 new VibrationModule(catalystApplicationContext),
                 new WebSocketModule(catalystApplicationContext),
                 new ThreadSelfModule(catalystApplicationContext),
-                new DevSettingsModule(reactInstanceManager.getDevSupportManager())
+                new DevSettingsModule(reactInstanceManager.getDevSupportManager()),
+
+                // Additional list
+                new RNDeviceModule(catalystApplicationContext)
+
         );
     }
 

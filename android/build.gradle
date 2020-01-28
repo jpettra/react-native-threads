@@ -1,11 +1,13 @@
 
 buildscript {
     repositories {
+        google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        // classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath('com.android.tools.build:gradle:3.5.3')
     }
 }
 
@@ -31,14 +33,27 @@ android {
 
 repositories {
     mavenCentral()
+    mavenLocal()
     jcenter()
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
+        url "$rootDir/../node_modules/@react-native-community/async-storage/android"
+        url "$rootDir/../node_modules/react-native-cookies/android"
+        url "$rootDir/../node_modules/react-native-device-info/android"
+        url "$rootDir/../node_modules/react-native-orientation-locker/android"
+        url "$rootDir/../node_modules/react-native-default-preference/android"
     }
+    google()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
+    //implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':@react-native-community_async-storage')
+    implementation project(':react-native-device-info')
+    implementation project(':react-native-orientation-locker')
+    implementation project(':react-native-cookies')
+    implementation project(':react-native-default-preference')
 }
-
