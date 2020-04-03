@@ -1,35 +1,33 @@
 {
-  "_from": "react-native-threads@latest",
-  "_id": "react-native-threads@0.0.17",
+  "_from": "git+https://git@github.com/johnyoonh/react-native-threads.git",
+  "_id": "react-native-threads@0.1.0",
   "_inBundle": false,
-  "_integrity": "sha512-Qoi5djj3XtQGNkBzcLMBMtqoARm+805VQroP2YoH8ohdQPkcxuPbduJCw+rTuk6grpbXGNpOu9zS41r1oA0uVw==",
+  "_integrity": "",
   "_location": "/react-native-threads",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "react-native-threads@latest",
-    "name": "react-native-threads",
-    "escapedName": "react-native-threads",
-    "rawSpec": "latest",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "type": "git",
+    "raw": "git+https://git@github.com/johnyoonh/react-native-threads.git",
+    "rawSpec": "git+https://git@github.com/johnyoonh/react-native-threads.git",
+    "saveSpec": "git+https://git@github.com/johnyoonh/react-native-threads.git",
+    "fetchSpec": "https://git@github.com/johnyoonh/react-native-threads.git",
+    "gitCommittish": null
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-native-threads/-/react-native-threads-0.0.17.tgz",
   "_shasum": "a880c14244fa1b9183ed99761bb7dfd170f79069",
-  "_spec": "react-native-threads@latest",
+  "_spec": "git+https://git@github.com/johnyoonh/react-native-threads.git",
   "_where": "/Users/jack/git/mobile-app",
   "author": {
-    "name": "Travis Nuttall"
+    "name": "John Yoon"
   },
   "bugs": {
-    "url": "https://github.com/joltup/react-native-threads/issues"
+    "url": "https://github.com/johnyoonh/react-native-threads/issues"
   },
   "bundleDependencies": false,
+  "dependencies": {},
   "deprecated": false,
   "description": "[![npm version](https://img.shields.io/npm/v/react-native-threads.svg?style=flat-square)](https://www.npmjs.com/package/react-native-threads) [![downloads](https://img.shields.io/npm/dm/react-native-threads.svg?style=flat-square)](https://www.npmjs.com/package/react-native-threads)",
   "files": [
@@ -38,7 +36,7 @@
     "js/",
     "index.js"
   ],
-  "homepage": "https://github.com/joltup/react-native-threads#readme",
+  "homepage": "https://github.com/johnyoonh/react-native-threads#readme",
   "keywords": [
     "react-native",
     "thread",
@@ -55,11 +53,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/joltup/react-native-threads.git"
+    "url": "git+ssh://git@github.com/johnyoonh/react-native-threads.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.17",
-  "dependencies": {}
+  "version": "0.1.0"
 }

@@ -7,7 +7,7 @@ buildscript {
 
     dependencies {
         // classpath 'com.android.tools.build:gradle:2.2.3'
-        classpath('com.android.tools.build:gradle:3.5.3')
+        classpath('com.android.tools.build:gradle:3.6.1')
     }
 }
 
@@ -18,11 +18,11 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 23)
+    compileSdkVersion safeExtGet('compileSdkVersion', 28)
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
-        targetSdkVersion safeExtGet('targetSdkVersion', 22)
+        targetSdkVersion safeExtGet('targetSdkVersion', 28)
         versionCode 1
         versionName "1.0"
     }
@@ -45,13 +45,13 @@ repositories {
         url "$rootDir/../node_modules/react-native-default-preference/android"
     }
     google()
-    maven { url 'https://jitpack.io' }
+    maven { url 'https://www.jitpack.io' }
 }
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
     //implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(':@react-native-community_async-storage')
+    implementation project(':react-native-community_async-storage')
     implementation project(':react-native-device-info')
     implementation project(':react-native-orientation-locker')
     implementation project(':react-native-cookies')
