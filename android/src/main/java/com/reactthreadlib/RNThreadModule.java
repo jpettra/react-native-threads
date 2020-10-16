@@ -17,7 +17,7 @@ import com.facebook.react.devsupport.interfaces.DevSupportManager;
 
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import org.wonday.orientation.OrientationPackage;
-import com.psykar.cookiemanager.CookieManagerPackage;
+import com.reactnativecommunity.cookies.CookieManagerPackage;
 import com.kevinresol.react_native_default_preference.RNDefaultPreferencePackage;
 
 import java.io.File;

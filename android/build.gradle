@@ -39,7 +39,7 @@ repositories {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
         url "$rootDir/../node_modules/@react-native-community/async-storage/android"
-        url "$rootDir/../node_modules/react-native-cookies/android"
+        url "$rootDir/../node_modules/@react-native-community/cookies/android"
         url "$rootDir/../node_modules/react-native-device-info/android"
         url "$rootDir/../node_modules/react-native-orientation-locker/android"
         url "$rootDir/../node_modules/react-native-default-preference/android"
@@ -54,6 +54,6 @@ dependencies {
     implementation project(':react-native-community_async-storage')
     implementation project(':react-native-device-info')
     implementation project(':react-native-orientation-locker')
-    implementation project(':react-native-cookies')
+    implementation project(':@react-native-community_cookies')
     implementation project(':react-native-default-preference')
 }
