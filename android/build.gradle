@@ -38,7 +38,7 @@ repositories {
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
-        url "$rootDir/../node_modules/@react-native-community/async-storage/android"
+        url "$rootDir/../node_modules/@react-native-async-storage/async-storage/android"
         url "$rootDir/../node_modules/@react-native-community/cookies/android"
         url "$rootDir/../node_modules/react-native-device-info/android"
         url "$rootDir/../node_modules/react-native-orientation-locker/android"
@@ -51,7 +51,8 @@ repositories {
 dependencies {
     implementation 'com.facebook.react:react-native:+'
     //implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(':react-native-community_async-storage')
+    implementation project(':@react-native-async-storage')
+    // implementation project(':react-native-community_async-storage')
     implementation project(':react-native-device-info')
     implementation project(':react-native-orientation-locker')
     implementation project(':@react-native-community_cookies')
